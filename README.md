@@ -2,7 +2,7 @@
 User-level UART I/O library for ESP-IDF.
 
 # Background
-The Arduino environment has several libraries for handling UART devices such as MP3 players, GPS receivers, GAS sensor.   
+The Arduino environment has several libraries and applications for handling UART devices such as MP3 players, GPS receivers, and gas sensors.   
 ESP-IDF provides a highly functional UART driver.   
 But we can't treat it like STDIN/STDOUT.   
 I created this to port applications and libraries that use UART from the Arduino environment to the ESP-IDF environment.   
