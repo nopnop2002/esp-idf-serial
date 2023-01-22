@@ -29,6 +29,10 @@ idf.py flash
 Plug the TTL-USB Converter into your host and open a serial terminal on your host.   
 I use GtkTerm on linux.   
 
+# Limitation
+When using this library, the task that initializes and the task that does the IO must be the same.   
+Unlike other drivers provided by ESP-IDF, initialization and IO cannot be separated into separate tasks.   
+
 # Arduno code
 ```
 #include <SoftwareSerial.h>
