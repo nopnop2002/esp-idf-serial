@@ -9,7 +9,7 @@ I created this to port applications and libraries that use UART from the Arduino
 
 
 # Software requirements
-ESP-IDF V4.4/V5.0.   
+ESP-IDF V4.4 or later.   
 
 # Installation
 
