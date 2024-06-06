@@ -24,12 +24,12 @@
 #define TXD_PIN (GPIO_NUM_4)
 #define RXD_PIN (GPIO_NUM_5)
 
-#define READONKY 0
+#define READ_WRITE 1
 
 void app_main(void)
 {
 	serial_begin(112500, TXD_PIN, RXD_PIN);
-#if READONLY
+#if READ_WRITE
 	TickType_t lastTick = xTaskGetTickCount();
 #endif
 	while(1) {
@@ -46,7 +46,7 @@ void app_main(void)
 			}
 		}
 
-#if READONLY
+#if READ_WRITE
 		TickType_t nowTick = xTaskGetTickCount();
 		if (nowTick - lastTick > 100) {
 			lastTick = xTaskGetTickCount();
