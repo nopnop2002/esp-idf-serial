@@ -3,7 +3,6 @@ name: Compile ESP-IDF Sketches for v5.1
 on:
   pull_request:
     paths:
-      - ".github/workflows/espidf-compile.yml"
       - "main/**"
       - "components/**"
       - "CMakeLists.txt"
