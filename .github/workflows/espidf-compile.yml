@@ -1,4 +1,4 @@
-name: Compile ESP-IDF Sketches for v5.1
+name: esp-idf-ci-action
 
 on:
   pull_request:
