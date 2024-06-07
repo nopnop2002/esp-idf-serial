@@ -4,11 +4,6 @@ on:
   pull_request:
     paths:
       - "main/**"
-      - "components/**"
-      - "CMakeLists.txt"
-      - "Kconfig"
-      - "partitions.csv"
-      - "sdkconfig.defaults"
 
   push:
     paths:
