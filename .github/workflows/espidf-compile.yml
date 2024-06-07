@@ -8,13 +8,9 @@ on:
 
   push:
     paths:
-      - ".github/workflows/espidf-compile.yml"
       - "main/**"
       - "components/**"
-      - "CMakeLists.txt"
-      - "Kconfig"
-      - "partitions.csv"
-      - "sdkconfig.defaults"
+
   workflow_dispatch:
   repository_dispatch:
 
