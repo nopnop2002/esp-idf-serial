@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - "main/**"
+      - "components/**"
 
   push:
     paths:
@@ -23,7 +24,6 @@ jobs:
       fail-fast: false
       matrix:
         idf_ver:
-          - release-v4.4
           - release-v5.0
           - release-v5.1
           - release-v5.2
