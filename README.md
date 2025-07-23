@@ -7,12 +7,11 @@ ESP-IDF provides a highly functional UART driver.
 But we can't treat it like STDIN/STDOUT.   
 I created this to port applications and libraries that use UART from the Arduino environment to the ESP-IDF environment.   
 
-
 # Software requirements
-ESP-IDF V4.4 or later.   
+ESP-IDF V5.0 or later.   
+ESP-IDF V4.4 release branch reached EOL in July 2024.   
 
 # Installation
-
 ```Shell
 git clone https://github.com/nopnop2002/esp-idf-serial
 cd esp-idf-serial
@@ -113,3 +112,30 @@ void app_main(void)
     }
 }
 ```
+
+# How to use this component in your project   
+Create idf_component.yml in the same directory as main.c.   
+```
+YourProject --+-- CMakeLists.txt
+              +-- main --+-- main.c
+                         +-- CMakeLists.txt
+                         +-- idf_component.yml
+```
+
+Contents of idf_component.yml.
+```
+dependencies:
+  nopnop2002/serial:
+    path: components/serial/
+    git: https://github.com/nopnop2002/esp-idf-serial.git
+```
+
+When you build a projects esp-idf will automaticly fetch repository to managed_components dir and link with your code.   
+```
+YourProject --+-- CMakeLists.txt
+              +-- main --+-- main.c
+              |          +-- CMakeLists.txt
+              |          +-- idf_component.yml
+              +-- managed_components ----- nopnop2002__serial
+```
+
