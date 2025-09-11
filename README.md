@@ -18,7 +18,7 @@ cd esp-idf-serial
 idf.py flash
 ```
 
-# Wirering
+# Wiring
 |ESP32||TTL-USB Converter|
 |:-:|:-:|:-:|
 |GPIO4|--|TX|
